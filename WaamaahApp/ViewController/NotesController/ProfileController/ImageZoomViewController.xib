@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageZoomViewController" customModule="WaamaahApp" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollImageView" destination="xB3-G5-hEn" id="Ror-gf-bmF"/>
+                <outlet property="scrollView" destination="Ibe-bn-BIN" id="PLq-tT-Wfg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="eax-vo-kop">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibe-bn-BIN">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="xB3-G5-hEn">
+                                    <rect key="frame" x="38" y="174" width="300" height="300"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="300" id="nEA-zp-pSh"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.59110915490000004" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="xB3-G5-hEn" secondAttribute="trailing" constant="37" id="8a4-Sk-oil"/>
+                                <constraint firstItem="xB3-G5-hEn" firstAttribute="leading" secondItem="Ibe-bn-BIN" secondAttribute="leading" constant="38" id="lxl-nY-i0J"/>
+                                <constraint firstItem="xB3-G5-hEn" firstAttribute="centerX" secondItem="Ibe-bn-BIN" secondAttribute="centerX" id="pcX-hI-U5O"/>
+                                <constraint firstItem="xB3-G5-hEn" firstAttribute="centerY" secondItem="Ibe-bn-BIN" secondAttribute="centerY" id="qPM-sY-4gh"/>
+                                <constraint firstAttribute="bottom" secondItem="xB3-G5-hEn" secondAttribute="bottom" constant="173" id="vWS-nb-bmE"/>
+                            </constraints>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6L-Wy-lPL">
+                            <rect key="frame" x="331" y="3" width="35" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.8125" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="77V-O4-1fw"/>
+                                <constraint firstAttribute="width" constant="35" id="gjJ-AK-Wdd"/>
+                            </constraints>
+                            <state key="normal" image="closeorange"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeScrollView:" destination="-1" eventType="touchUpInside" id="uxn-ex-1iV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ibe-bn-BIN" firstAttribute="top" secondItem="eax-vo-kop" secondAttribute="top" id="6fg-Xl-LvK"/>
+                        <constraint firstItem="O6L-Wy-lPL" firstAttribute="top" secondItem="eax-vo-kop" secondAttribute="top" constant="3" id="Irp-wD-24M"/>
+                        <constraint firstAttribute="bottom" secondItem="Ibe-bn-BIN" secondAttribute="bottom" id="XqO-ge-bna"/>
+                        <constraint firstAttribute="trailing" secondItem="O6L-Wy-lPL" secondAttribute="trailing" constant="9" id="gPq-rw-Zy8"/>
+                        <constraint firstAttribute="trailing" secondItem="Ibe-bn-BIN" secondAttribute="trailing" id="kg3-Nf-N4G"/>
+                        <constraint firstItem="Ibe-bn-BIN" firstAttribute="leading" secondItem="eax-vo-kop" secondAttribute="leading" id="kjL-0u-m19"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eax-vo-kop" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="CQ2-e0-y9S"/>
+                <constraint firstItem="eax-vo-kop" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GcO-dv-cb3"/>
+                <constraint firstItem="eax-vo-kop" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="UFm-BR-3tn"/>
+                <constraint firstItem="eax-vo-kop" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bzH-Or-BVR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeorange" width="30" height="30"/>
+        <image name="profile" width="500" height="500"/>
+    </resources>
+</document>
